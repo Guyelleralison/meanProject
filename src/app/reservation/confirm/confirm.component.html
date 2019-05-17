@@ -1,0 +1,46 @@
+<body style="background-image:url('../../assets/cinema.jpg')">
+  <div class="jumbotron" style="opacity:0.9">
+      <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Réservation confirmée!</h4>
+          <p>Félicitations ! votre réservation a été enregistré avec succès ! Un e-mail de confirmation vous sera envoyé à votre adresse. Veuillez imprimer cet e-mail pour réccupérer vos billets. Merci</p>
+          Votre e-mail : <h6 class="font-weight-bold">gralison@hotmail.com</h6>
+        </div>
+        <div>
+            <p>En réservant votre place en ligne, vous avez droit à deux cadeaux offert.</p>
+            <p>Veuillez glisser vos choix vers votre carte cadeau ci après :) </p>
+          </div>
+
+          <div class="example-container">
+              <h2>Vos cadeaux possibles</h2>
+            
+              <div
+                cdkDropList
+                #todoList="cdkDropList"
+                [cdkDropListData]="todo"
+                [cdkDropListConnectedTo]="[doneList]"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item.name}} <img src="{{item.urlImage}}" width=30px height=auto></div>
+              </div>
+            </div>
+            
+            <div class="example-container">
+              <h2>Votre carte cadeau</h2>
+            
+              <div
+                cdkDropList
+                #doneList="cdkDropList"
+                [cdkDropListData]="done"
+                [cdkDropListConnectedTo]="[todoList]"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.name}} <img src="{{item.urlImage}}" width=100px height=auto></div>
+              </div>
+            </div>
+            
+            
+  </div>
+
+  
+  
+</body>

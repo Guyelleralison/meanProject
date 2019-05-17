@@ -1,0 +1,65 @@
+<body style="background-image:url('../../assets/cinema.jpg')">
+  <ng-template #customLoadingTemplate>
+      <div class="custom-class">
+          <h3>
+              Loading...
+          </h3>
+          <button (click)="showAlert()">
+              Click me!
+          </button>
+      </div>
+  </ng-template>
+
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+  <br>
+    <div class="row">
+      <div class="col lg-md-8">
+        <div class="jumbotron" style="background-color:rgb(245, 241, 241);opacity: 0.9;margin-left: 20px;">
+          <h2>Pas encore membre ? Inscrivez-vous : </h2>
+          <form>
+              <div class="form-group">
+                <label for="inputName">Nom</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Nom">
+              </div>
+              <div class="form-group">
+                <label for="inputFName">Prénom</label>
+                <input type="text" class="form-control" id="inputFName" placeholder="Prénom">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Adresse e-mail</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre e-mail">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Mot de passe</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword2">Confirmer le Mot de passe</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Mot de passe">
+              </div>
+              <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </form>
+        </div>
+      </div>
+      <div class="col lg-md-4">
+        <div class="jumbotron" style="background-color:rgb(56, 44, 99);opacity: 0.9;margin-right: 20px;">
+          <h2 class="text-reverse">Connectez-vous : </h2>
+          <form>
+              <div class="form-group">
+                <label for="email" class="text-reverse">Entrez votre adresse e-mail</label>
+                <input (keyup)="onKeyEmail($event)" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Votre e-mail" name="email">
+                <small id="emailHelp" class="text-reverse">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="password" class="text-reverse">Mot de passe</label>
+                <input type="password" (keyup)="onKeyPassword($event)" class="form-control" id="password" placeholder="Mot de passe" name="password">
+              </div>
+              <button (click)="Login()" class="btn btn-primary">Se connecter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+
+

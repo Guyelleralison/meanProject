@@ -1,0 +1,79 @@
+
+<div class="jumbotron" style="background-image:url('../../../assets/cover_detail_image/Dumbo.jpg')">
+  <h1 class="text-reverse">
+      {{currentMovie}}
+  </h1>
+  <div class="jumbotron" style="background-color : rgb(255, 255, 255);opacity: 0.8;">
+    <p>Aventure(1h52) de Tim Burton</p>
+    <p>
+        Les enfants de Holt Farrier, ex-artiste de cirque chargé de s'occuper d'un éléphanteau dont les oreilles démesurées sont la risée du public, découvrent que ce dernier sait voler... 
+    </p>
+    <hr>
+    <h2>SEANCES</h2>
+    <mat-tab-group>
+        <mat-tab label="13/05" >
+          <div class="jumbotron" style="background-color:darkgrey">
+              <div class="row">
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-danger" disabled>
+                        17:05 <span class="badge badge-light">VF</span>
+                    </button>
+                </div>
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary" routerLink="/salle/:id">
+                        18:05 <span class="badge badge-light">VO</span>
+                    </button>
+                </div>
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary">
+                        20:05 <span class="badge badge-light">VOST</span>
+                    </button>
+                </div>
+              </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="14/05" >
+          <div class="jumbotron" style="background-color:darkgrey">
+              <div class="row">
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary">
+                        16:50 <span class="badge badge-light">VF</span>
+                    </button>
+                </div>
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary">
+                        21:30 <span class="badge badge-light">VO</span>
+                    </button>
+                </div>
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary">
+                        22:00 <span class="badge badge-light">VOST</span>
+                    </button>
+                </div>
+              </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="15/05" >
+          <div class="jumbotron" style="background-color:darkgrey">
+              <div class="row">
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary">
+                        10:50 <span class="badge badge-light">VF</span>
+                    </button>
+                </div>
+                <div class="col lg-md-3">
+                    <button type="button" class="btn btn-primary">
+                        15:30 <span class="badge badge-light">VO</span>
+                    </button>
+                </div>
+              </div>
+          </div>
+        </mat-tab>
+        
+    </mat-tab-group>
+</div>
+
+
+
